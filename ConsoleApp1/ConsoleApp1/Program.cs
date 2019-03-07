@@ -10,38 +10,33 @@ using System.Threading.Tasks;
 
 namespace ConsoleApp1
 {
+    class Program
+    {
+        static void Main
+    }
     public class DelegateExercises
     {
-        public delegate void MyDelgate();
+        public delegate int MyDelegate(int intValue);
 
 
-        void Method1()
+        public int Method1(int intMethod1)
         {
-
-            Console.WriteLine("Method1");
-            Console.ReadLine();
+            return intMethod1 * 2;
         }
-        public void Method2()
+        public int Method2(int intMethod2)
         {
-            MyDelgate myDelgate = new MyDelgate(Method1);
-
-            myDelgate(50);
+            return intMethod2 * 10;
         }
-
-
-
-
-
-    }
-}
-namespace DelegatesAndEvents
-{ 
-
-class Program
-    {
-        static void Main(string[] args)
+        public void Method3()
         {
-            //TO DO: Call Method2 from the DelegateExercises Class
+            MyDelegate myDelegate = new MyDelegate(Method1);
+            int result1 = myDelegate(10);
+            System.Console.WriteLine(result1);
+            myDelegate = new MyDelegate(Method2);
+            int result2 = myDelegate(10);
+            System.Console.WriteLine(result2);
         }
     }
 }
+
+

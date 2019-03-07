@@ -2,9 +2,7 @@
 //.C0731788
 //Assignment2
 //March 07,2019
-using System;
-
-namespace DelegatesAndEvents
+namespace anmol
 {
     public class Program
     {
@@ -20,18 +18,18 @@ namespace DelegatesAndEvents
         public delegate int MyDelegate(int intValue);
         int Method1(int intMethod1)
         {
-            return intMethod1 * 2;
+            return intMethod1 * 4;
         }
 
         int Method2(int intMethod1)
         {
-            return intMethod2 * 10;
+            return intMethod1 * 20;
         }
 
         public void Method4(MyDelegate myDelegate)
         {
-            int result = myDelegate(10);
-            Console.WriteLine(result);
+            for (int i = 1; i <= 5; i++)
+                Console.WriteLine(myDelegate(i) + "");
         }
 
         public void Method3()

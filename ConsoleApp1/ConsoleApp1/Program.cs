@@ -25,7 +25,7 @@ namespace ConsoleApp1
         {
             MyDelgate myDelgate = new MyDelgate(Method1);
 
-            myDelgate();
+            myDelgate(50);
         }
 
 
@@ -34,10 +34,14 @@ namespace ConsoleApp1
 
     }
 }
+namespace DelegatesAndEvents
+{ 
 
 class Program
-{
-    static void Main(string[] args)
     {
+        static void Main(string[] args)
+        {
+            //TO DO: Call Method2 from the DelegateExercises Class
+        }
     }
 }
